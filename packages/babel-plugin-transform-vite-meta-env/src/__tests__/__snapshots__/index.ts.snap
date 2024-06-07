@@ -40,7 +40,7 @@ const x = import.meta.env.OTHER
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const x = {
-  ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^VITE_/.test(k))),
+  ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^PUBLIC_/.test(k))),
   NODE_ENV: process.env.NODE_ENV || 'test',
   MODE: process.env.NODE_ENV || 'test',
   BASE_URL: '/',
@@ -106,13 +106,13 @@ const x = process.env.NODE_ENV === 'production'
 
 `;
 
-exports[`vite-meta-env replace VITE_* variables: replace VITE_* variables 1`] = `
+exports[`vite-meta-env replace PUBLIC_* variables: replace PUBLIC_* variables 1`] = `
 
-const x = import.meta.env.VITE_VAR
+const x = import.meta.env.PUBLIC_VAR
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-const x = process.env.VITE_VAR
+const x = process.env.PUBLIC_VAR
 
 
 `;
@@ -124,7 +124,7 @@ const env = import.meta.env
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const env = {
-  ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^VITE_/.test(k))),
+  ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^PUBLIC_/.test(k))),
   NODE_ENV: process.env.NODE_ENV || 'test',
   MODE: process.env.NODE_ENV || 'test',
   BASE_URL: '/',
@@ -137,13 +137,13 @@ const env = {
 
 exports[`vite-meta-env replace key access: replace key access 1`] = `
 
-const key = "VITE_VAR"; const x = import.meta.env[key]
+const key = "PUBLIC_VAR"; const x = import.meta.env[key]
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-const key = 'VITE_VAR'
+const key = 'PUBLIC_VAR'
 const x = {
-  ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^VITE_/.test(k))),
+  ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^PUBLIC_/.test(k))),
   NODE_ENV: process.env.NODE_ENV || 'test',
   MODE: process.env.NODE_ENV || 'test',
   BASE_URL: '/',
@@ -156,18 +156,18 @@ const x = {
 
 exports[`vite-meta-env replace string access: replace string access 1`] = `
 
-const x = import.meta.env["VITE_VAR"]
+const x = import.meta.env["PUBLIC_VAR"]
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const x = {
-  ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^VITE_/.test(k))),
+  ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^PUBLIC_/.test(k))),
   NODE_ENV: process.env.NODE_ENV || 'test',
   MODE: process.env.NODE_ENV || 'test',
   BASE_URL: '/',
   DEV: process.env.NODE_ENV !== 'production',
   PROD: process.env.NODE_ENV === 'production'
-}['VITE_VAR']
+}['PUBLIC_VAR']
 
 
 `;

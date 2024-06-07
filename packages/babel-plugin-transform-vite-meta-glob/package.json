@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin-transform-vite-meta-glob",
+  "name": "@fond-of/babel-plugin-transform-vite-meta-glob",
   "version": "0.0.0-semantically-released",
   "description": "babel plugin that emulates vite's import.meta.glob import.meta.globEager functionality",
   "main": "lib/index.js",
@@ -8,10 +8,6 @@
     "lib",
     "src"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OpenSourceRaidGuild/babel-vite.git"
-  },
   "keywords": [
     "babel",
     "vite",
@@ -23,10 +19,6 @@
   ],
   "author": "Michael Peyper <mpeyper7@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/OpenSourceRaidGuild/babel-vite/issues"
-  },
-  "homepage": "https://github.com/OpenSourceRaidGuild/babel-vite#readme",
   "scripts": {
     "build": "kcd-scripts build --out-dir lib",
     "test": "kcd-scripts test"

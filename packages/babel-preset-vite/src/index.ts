@@ -13,9 +13,9 @@ function vitePreset(
   const { env = true, glob = true, hot = true } = opts
   return {
     plugins: [
-      glob && require.resolve('babel-plugin-transform-vite-meta-glob'),
-      env && require.resolve('babel-plugin-transform-vite-meta-env'),
-      hot && require.resolve('babel-plugin-transform-vite-meta-hot')
+      glob && require.resolve('@fond-of/babel-plugin-transform-vite-meta-glob'),
+      env && require.resolve('@fond-of/babel-plugin-transform-vite-meta-env'),
+      hot && require.resolve('@fond-of/babel-plugin-transform-vite-meta-hot')
     ].filter(isEnabled)
   }
 }

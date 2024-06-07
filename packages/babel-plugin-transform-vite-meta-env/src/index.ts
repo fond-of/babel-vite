@@ -2,7 +2,7 @@ import type babelCore from '@babel/core'
 
 const replaceVars = [
   {
-    regex: /^VITE_/,
+    regex: /^PUBLIC_/,
     replacement: (template: typeof babelCore.template, variableName: string) =>
       template.expression('process.env.%%variableName%%')({ variableName })
   },
@@ -29,7 +29,7 @@ const replaceVars = [
 
 const replaceEnv = (template: typeof babelCore.template) =>
   template.expression.ast(`{
-    ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^VITE_/.test(k))),
+    ...Object.fromEntries(Object.entries(process.env).filter(([k]) => /^PUBLIC_/.test(k))),
     NODE_ENV: process.env.NODE_ENV || 'test',
     MODE: process.env.NODE_ENV || 'test',
     BASE_URL: '/',

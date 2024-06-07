@@ -1,4 +1,4 @@
-export const envVar = import.meta.env.VITE_VAR
+export const envVar = import.meta.env.PUBLIC_VAR
 
 export const modules = import.meta.glob('files/*.ts')
 

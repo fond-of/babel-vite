@@ -1,5 +1,5 @@
 {
-  "name": "babel-preset-vite",
+  "name": "@fond-of/babel-preset-vite",
   "version": "0.0.0-semantically-released",
   "description": "babel preset that emulates vite's non-standard functionality",
   "main": "lib/index.js",
@@ -8,10 +8,6 @@
     "lib",
     "src"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OpenSourceRaidGuild/babel-vite.git"
-  },
   "keywords": [
     "babel",
     "vite",
@@ -22,10 +18,6 @@
   ],
   "author": "Michael Peyper <mpeyper7@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/OpenSourceRaidGuild/babel-vite/issues"
-  },
-  "homepage": "https://github.com/OpenSourceRaidGuild/babel-vite#readme",
   "scripts": {
     "build": "kcd-scripts build --out-dir lib",
     "test": "kcd-scripts test"
@@ -40,8 +32,8 @@
   "dependencies": {
     "@babel/runtime": "^7.13.9",
     "@types/babel__core": "^7.1.12",
-    "babel-plugin-transform-vite-meta-env": "^0.0.0-semantically-released",
-    "babel-plugin-transform-vite-meta-glob": "^0.0.0-semantically-released",
-    "babel-plugin-transform-vite-meta-hot": "^0.0.0-semantically-released"
+    "@fond-of/babel-plugin-transform-vite-meta-env": "^0.0.0-semantically-released",
+    "@fond-of/babel-plugin-transform-vite-meta-glob": "^0.0.0-semantically-released",
+    "@fond-of/babel-plugin-transform-vite-meta-hot": "^0.0.0-semantically-released"
   }
 }

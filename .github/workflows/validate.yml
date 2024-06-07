@@ -1,8 +1,14 @@
 name: validate
-
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - 'main'
+      - 'beta'
+      - 'alpha'
+      - '!all-contributors/**'
+
+env: 
+  NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   release:
